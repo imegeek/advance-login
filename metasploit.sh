@@ -38,6 +38,7 @@ cd .setup && bash uninstall.sh
 
 else
 echo
+
 printf "\e[1;95m                        [!] Invalid option! ~Restarting..\e[0m\n"
 bash metasploit.sh
 fi
