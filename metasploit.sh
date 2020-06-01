@@ -33,7 +33,7 @@ cd .setup && bash install.sh
 
 if [[ $meta = "2" ]] || [[ $meta = "02" ]]
         then clear
-cd .setup && uninstall.sh
+cd .setup && bash uninstall.sh
 
 else
 echo
