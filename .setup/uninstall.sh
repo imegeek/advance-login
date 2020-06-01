@@ -1,7 +1,7 @@
 echo -n "Are you sure (Y/N)? "
 read ask
 
-if [[ $input = "1" ]] || [[ $input = "01" ]]
+if [[ $input = "Y" ]] || [[ $input = "y" ]]
        then clear
 if [ -d "/data/data/com.termux/files/usr/opt/metasploit-framework" ]; then
 pkg uninstall metasploit -y > /dev/null 2>&1
@@ -14,5 +14,5 @@ echo -e '\033[1;91m[!] metasploit package not found.\033[0m'
 exit
 fi
 
-elif [[ $input = "1" ]] || [[ $input = "01" ]]
+elif [[ $input = "N" ]] || [[ $input = "n" ]]
         then exit
