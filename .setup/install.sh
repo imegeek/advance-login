@@ -1,4 +1,3 @@
-
 if [ -d "/data/data/com.termux/files/usr/opt/metasploit-framework" ]; then
 echo && echo -e '\033[1;92m[√] Metasploit-framework already installed (:\033[0m' && echo
 fi
