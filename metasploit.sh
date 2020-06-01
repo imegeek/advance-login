@@ -1,3 +1,10 @@
+#!/bin/bash
+
+# Author : ABHacker Official
+# Copyright : ©2020-25-May
+# Script follows here:
+
+
 clear
 sleep 0.5
 echo -e '\033[1;94m
