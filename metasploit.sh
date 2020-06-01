@@ -27,11 +27,12 @@ printf "\e[1;92m                            [\e[0m\e[1;77m2\e[0m\e[1;92m]\e[0m\e
 echo
 printf $'\n\e[1;91m                             [\e[0m\e[1;77m*\e[0m\e[1;91m] Choose an option: \e[0m'
 read meta
+
 if [[ $meta = "1" ]] || [[ $meta = "01" ]]
         then clear
 cd .setup && bash install.sh
 
-if [[ $meta = "2" ]] || [[ $meta = "02" ]]
+elif [[ $meta = "2" ]] || [[ $meta = "02" ]]
         then clear
 cd .setup && bash uninstall.sh
 
