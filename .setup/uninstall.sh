@@ -1,4 +1,4 @@
-echo -n "Are you sure (Y/N)? "
+echo -ne "\033[1;91mAre you sure (\033[1;91mY\033[0m/\033[1;92mN)\033[38;2;0;255;180m?\033[m "
 read ask
 
 if [[ $ask = "Y" ]] || [[ $ask = "y" ]]
