@@ -13,6 +13,7 @@ fi
 if [ ! -d "/data/data/com.termux/files/usr/opt/metasploit-framework" ]; then
 echo -e '\033[1;92m[x] Metasploit-framework Uninstalling Failed! );\033[0m'
 echo -e '\033[1;91m[!] Metasploit-framework not found.\033[0m'
+echo
 exit
 fi
 
