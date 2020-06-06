@@ -6,6 +6,8 @@ if [[ $ask = "Y" ]] || [[ $ask = "y" ]]
 if [ -d "/data/data/com.termux/files/usr/opt/metasploit-framework" ]; then
 pkg uninstall metasploit -y > /dev/null 2>&1
 echo -e '\033[1;92m[√] Metasploit-framework Uninstalled Successfully. (:\033[0m'
+echo
+exit
 fi
 
 if [ ! -d "/data/data/com.termux/files/usr/opt/metasploit-framework" ]; then
