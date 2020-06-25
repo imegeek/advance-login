@@ -4,6 +4,4 @@ Android 7.1 and above.
 
 ### •Quick Installation:
 
-```
-git clone https://github.com/abhackerofficial/Metasploit-Installer && cd Metasploit-Installer && bash metasploit.sh``` <br/>
-```
+```git clone https://github.com/abhackerofficial/Metasploit-Installer && cd Metasploit-Installer && bash metasploit.sh``` <br/>
