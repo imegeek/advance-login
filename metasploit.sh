@@ -23,7 +23,10 @@ echo
 printf "\e[1;94m[\e[0m\e[1;77m1\e[0m\e[1;94m]\e[0m\e[1;94m Install Metasploit"
 echo
 echo
-printf "\e[1;92m[\e[0m\e[1;77m2\e[0m\e[1;92m]\e[0m\e[1;92m Uninstall Metasploit\e[0m"
+printf "\e[1;92m[\e[0m\e[1;77m2\e[0m\e[1;92m]\e[0m\e[1;92m Uninstall Metasploit \e[0m"
+echo
+echo
+printf "\e[1;38;2;255;255;0m[\e[0m\e[1;77m3\e[0m\e[1;38;2;255;255;0m]\e[0m\e[1;38;2;255;255;0m MSVENOM [Payload]\e[0m"
 echo
 printf $'\n\e[1;91m[\e[0m\e[1;77m*\e[0m\e[1;91m] Choose an option: \e[0m'
 read meta
@@ -36,6 +39,8 @@ elif [[ $meta = "2" ]] || [[ $meta = "02" ]]
         then clear
 cd .setup && bash uninstall.sh
 
+elif [[ $meta = "3" ]] || [[ $meta = "03" ]]
+        then cd .setup && bash extra.sh
 else
 echo
 printf "\e[1;95m[!] Invalid option! ~Restarting..\e[0m\n"
