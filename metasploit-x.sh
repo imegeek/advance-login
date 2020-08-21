@@ -19,7 +19,7 @@ echo -e '\033[1;94m
 \e[1;94m                ┃┃
 \e[1;94m                ┗┛'
 
-echo -e '     \e[0;102;90mCoding by @abhackerofficial\033[0m'
+echo -e '\e[0;102;90m     Coding by @abhackerofficial     \033[0m'
 sleep 0.2 ;echo;echo; }
 
 options() {
