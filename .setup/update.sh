@@ -65,4 +65,4 @@ echo -ne "${c5}${c1}${c1}▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
 sleep 0.5
 echo -e "\n"
 NORM
-cd Metasploit-X && bash metasploit-x.sh
+cd Metasploit-X && bash metasploit-x
