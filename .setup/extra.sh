@@ -4,7 +4,7 @@ if [ ! -d "/data/data/com.termux/files/usr/opt/metasploit-framework" ]; then
 echo
 echo -e '\033[1;91m[!] You have to install "Metasploit-framework" ; then you can use it."\033[0m'
 echo
-printf "[?] Are you want to install Metasploit-framework right now ? "
+printf "[?] Are you want to install Metasploit-framework right Now [Y/n] ? "
 read ask
 if [[ $ask = "y" ]] || [[ ask = "Y" ]];then
 bash install.sh
