@@ -63,8 +63,8 @@ cd .setup && bash uninstall.sh
 elif [[ $meta = "3" ]] || [[ $meta = "03" ]]
         then cd .setup && bash extra.sh
 
-elif [[ $meta = "3" ]] || [[ $meta = "03" ]]
-        then echo -e "\e[0m[!] Updating... Metasploit-X"
+elif [[ $meta = "4" ]] || [[ $meta = "04" ]]
+        then echo -e "\e[0;1m[!] Updating... Metasploit-X\n"
 cd .setup && bash update.sh
 else echo;
 printf "\e[1;77m[!] Invalid option! ~Closing..\e[0m\n\n"
