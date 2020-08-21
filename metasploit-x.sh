@@ -64,7 +64,7 @@ elif [[ $meta = "3" ]] || [[ $meta = "03" ]]
         then cd .setup && bash extra.sh
 
 elif [[ $meta = "4" ]] || [[ $meta = "04" ]]
-        then echo -e "\e[0;1m[!] Updating... Metasploit-X\n"
+        then echo;echo -e "\e[0;1m[!] Updating... Metasploit-X\n"
 cd .setup && bash update.sh
 else echo;
 printf "\e[1;77m[!] Invalid option! ~Closing..\e[0m\n\n"
