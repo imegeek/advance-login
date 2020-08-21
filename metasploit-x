@@ -67,7 +67,9 @@ elif [[ $meta = "4" ]] || [[ $meta = "04" ]]
         then echo;echo -e "\e[0;1m[!] Updating... Metasploit-X\n"
 cd .setup && bash update.sh
 
+elif [[ $meta = "exit" ]] || [[ $meta = "Exit" ]] || [[ $meta = "EXIT" ]] || [[ $meta = "kill" ]] || [[ $meta = "Kill" ]] || [[ $meta = "KILL" ]] || [[ $meta = "bye" ]] || [[ $meta = "Bye" ]] || [[ $meta = "BYE" ]];then echo -e "\e[0;1mClosing..."; exit
+
 else echo;
-printf "\e[1;77m[!] Invalid option! ~Closing..\e[0m\n\n"
-exec sleep 0.5
+printf "\e[1;77m[!] Invalid option! Closing..\e[0m\n\n"
+exit
 fi
