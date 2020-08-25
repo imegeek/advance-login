@@ -46,9 +46,9 @@ echo -ne "${c4}${c1}▬▬▬▬▬▬▬▬▬▬${c2}▬▬▬▬▬▬▬▬�
 sleep 0.1
 echo -ne "${c4}${c1}▬▬▬▬▬▬▬▬▬▬▬${c2}▬▬▬▬▬▬▬▬${c6}${c3} (35%) Updating...\r"
 sleep 0.1
-git clone https://github.com/abhackerofficial/Metasploit-X &> /dev/null
 echo -ne "${c4}${c1}▬▬▬▬▬▬▬▬▬▬▬▬${c2}▬▬▬▬▬▬▬${c6}${c3} (45%) Updating...\r"
 sleep 0.1
+git clone https://github.com/abhackerofficial/Metasploit-X &> /dev/null
 echo -ne "${c4}${c1}▬▬▬▬▬▬▬▬▬▬▬▬▬${c2}▬▬▬▬▬▬${c6}${c3} (55%] Updating...\r"
 sleep 0.1
 echo -ne "${c4}${c1}▬▬▬▬▬▬▬▬▬▬▬▬▬▬${c2}▬▬▬▬▬${c6}${c3} (60%) Updating...\r"
