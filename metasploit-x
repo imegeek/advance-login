@@ -34,7 +34,7 @@ echo
 printf $'\n\e[1;91m[\e[0m\e[1;77m*\e[0m\e[1;91m] Choose an option : \e[0m'; }
 
 options1() {
-printf "\e[1;94m[\e[0m\e[1;77m1\e[0m\e[1;94m]\e[0m\e[1;94m Install Metasploit \e[0m(Not Installed\e[0m)"
+printf "\e[0;1;38;2;41;121;255m[\e[0m\e[1;77m1\e[0m\e[0;1;38;2;41;121;255m]\e[0m\e[0;1;38;2;41;121;255m Install Metasploit \e[0m(Not Installed)\e[0m"
 echo""
 printf "\e[1;92m[\e[0m\e[1;77m2\e[0m\e[1;92m]\e[0m\e[1;92m Uninstall Metasploit \e[0m(Not Installed)\e[0m"
 echo""
