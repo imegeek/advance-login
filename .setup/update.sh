@@ -7,6 +7,7 @@ c3='\e[0m'
 c4='\e[1m[⬇] [\e[0m'
 c5='\e[1m[√] [\e[0m'
 c6='\e[0;1m]\e[0m'
+c7='\e[1m[!] [\e[0m'
 HIDCRSR(){ echo -en "\033[?25l";}
 NORM(){ echo -en "\033[?12l\033[?25h";}
 
@@ -21,6 +22,9 @@ echo -ne "${c4}${c1}▬▬▬${c2}▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
 sleep 0.1
 echo -ne "${c4}${c1}▬▬▬▬${c2}▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬${c6}${c3} (0.6%) Checking...\r"
 sleep 0.1
+changed=0
+git remote update &> /dev/null && git status -uno | grep -q 'Your branch is behind' && changed=1
+if [ $changed = 1 ]; then
 connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
 if [[ "$connection" != 0 ]]
 then echo -ne "\033[0m"
@@ -66,3 +70,9 @@ sleep 0.5
 echo -e "\n"
 NORM
 cd Metasploit-X && bash metasploit-x
+else
+echo -ne "${c7}${c1}▬▬▬▬▬${c2}▬▬▬▬▬▬▬▬▬▬▬▬▬▬${c6}${c3} (0.8%) Not Founded... "
+echo -e "\n"
+NORM
+exit
+fi
