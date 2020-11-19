@@ -73,7 +73,7 @@ trap 5
 echo
 echo -e "\033[0m\033[1m[√] Payload Saved Dir : emulated/0/${app}.apk"
 echo
-echo -e "\e[0m==> Open: [O/o] :: Delete: [D/d] ::Send: [S/s] :: Payload: ${app}.apk"
+echo -e "\e[0m==> Open: [O/o] :: Delete: [D/d] :: Send: [S/s] :: Payload: ${app}.apk"
 echo
 printf '\033[1;92m[?] What do you want to Do with Payload ? '
 read ask
