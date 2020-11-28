@@ -55,18 +55,18 @@ fi
 read meta
 if [[ $meta = "1" ]] || [[ $meta = "01" ]]
         then clear
-cd .setup && bash install.sh
+cd programs && bash install.sh
 
 elif [[ $meta = "2" ]] || [[ $meta = "02" ]]
         then clear
-cd .setup && bash uninstall.sh
+cd programs && bash uninstall.sh
 
 elif [[ $meta = "3" ]] || [[ $meta = "03" ]]
-        then cd .setup && bash extra.sh
+        then cd programs && bash msvenom.sh
 
 elif [[ $meta = "4" ]] || [[ $meta = "04" ]]
         then echo;echo -e "\e[0;1m[!] Updating... Metasploit-X\n"
-cd .setup && bash update.sh
+cd programs && bash update.sh
 
 elif [[ $meta = "exit" ]] || [[ $meta = "Exit" ]] || [[ $meta = "EXIT" ]] || [[ $meta = "kill" ]] || [[ $meta = "Kill" ]] || [[ $meta = "KILL" ]] || [[ $meta = "bye" ]] || [[ $meta = "Bye" ]] || [[ $meta = "BYE" ]];then echo -e "\e[0;1mClosing..."; exit
 
